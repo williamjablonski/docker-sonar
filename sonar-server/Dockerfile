@@ -1,5 +1,5 @@
 from dockerfile/java
-maintainer Tiago Pires, tandrepires@gmail.com
+maintainer William Melchior Jablonski, william.jablonski@gmail.com
 
 # RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" > /etc/apt/sources.list
 RUN echo "deb http://downloads.sourceforge.net/project/sonar-pkg/deb binary/" >> /etc/apt/sources.list
