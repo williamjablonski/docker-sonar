@@ -1,5 +1,5 @@
 from ubuntu:14.04
-maintainer Tiago Pires, tandrepires@gmail.com
+maintainer William Melchior Jablonski, william.jablonski@gmail.com
 
 # Because docker replaces /sbin/init: https://github.com/dotcloud/docker/issues/1024 
 RUN dpkg-divert --local --rename --add /sbin/initctl
