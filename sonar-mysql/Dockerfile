@@ -4,6 +4,8 @@ maintainer William Melchior Jablonski, william.jablonski@gmail.com
 # Because docker replaces /sbin/init: https://github.com/dotcloud/docker/issues/1024 
 RUN dpkg-divert --local --rename --add /sbin/initctl
 
+RUN apt-get update && apt-get upgrade -y
+RUN apt-get install -y wget
 #RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" > /etc/apt/sources.list
 RUN  wget http://dev.mysql.com/get/mysql-apt-config_0.8.1-1_all.deb
 RUN  dpkg -i mysql-apt-config_0.8.1-1_all.deb
