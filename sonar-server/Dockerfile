@@ -2,11 +2,14 @@ from dockerfile/java
 maintainer William Melchior Jablonski, william.jablonski@gmail.com
 
 # RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" > /etc/apt/sources.list
-RUN echo "deb http://downloads.sourceforge.net/project/sonar-pkg/deb binary/" >> /etc/apt/sources.list
+# RUN echo "deb http://downloads.sourceforge.net/project/sonar-pkg/deb binary/" >> /etc/apt/sources.list
 RUN apt-get update && apt-get upgrade -y
 
-RUN apt-get install -y --force-yes sonar
-
+#RUN apt-get install -y --force-yes sonar
+RUN wget https://sonarsource.bintray.com/Distribution/sonarqube/sonarqube-6.6.zip
+RUN apt-get install unzip -y 
+RUN unzip sonarqube-6.6.zip -d /opt
+RUN mv /opt/sonarqube-6.4 /opt/sonarqube
 RUN sed -i 's|#wrapper.java.additional.6=-server|wrapper.java.additional.6=-server|g' /opt/sonar/conf/wrapper.conf
 
 RUN sed -i 's|#sonar.jdbc.password=sonar|sonar.jdbc.password=123qwe|g' /opt/sonar/conf/sonar.properties
