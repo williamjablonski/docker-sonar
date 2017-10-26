@@ -1,4 +1,4 @@
-# docker-sonar
+# docker-sonar v6.6
 
 SonarQube is an open platform to manage code quality.
 
