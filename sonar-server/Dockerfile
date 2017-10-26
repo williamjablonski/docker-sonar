@@ -1,4 +1,4 @@
-from dockerfile/java
+from dockerfile/java:oracle-java8
 maintainer William Melchior Jablonski, william.jablonski@gmail.com
 
 # RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" > /etc/apt/sources.list
