@@ -27,6 +27,6 @@ On this repo you'll find 2 images that provide the first 2 components:
 
 2. Now you need to run the server and link it with the database. That link will be named "db".
 
-	`docker run -i -t -d --name sonar -p 9000:9000 --link smysql:db williamjablonski/docker-sonar-6`
+	`docker run -i -t -d --name sonar6 -p 9000:9000 --link smysql:db williamjablonski/docker-sonar-6`
 
 You can now access to sonar-server by opening your browser to http://localhost:9000 .
