@@ -14,8 +14,8 @@ RUN sed -i 's|#wrapper.java.additional.6=-server|wrapper.java.additional.6=-serv
 
 RUN sed -i 's|#sonar.jdbc.password=|sonar.jdbc.password=123qwe|g' /opt/sonar/conf/sonar.properties
 RUN sed -i 's|#sonar.jdbc.user=|sonar.jdbc.user=sonar|g' /opt/sonar/conf/sonar.properties
-RUN sed -i 's|sonar.jdbc.url=jdbc:h2|#sonar.jdbc.url=jdbc:h2|g' /opt/sonar/conf/sonar.properties
-RUN sed -i 's|#sonar.jdbc.url=jdbc:mysql://localhost|sonar.jdbc.url=jdbc:mysql://${env:DB_PORT_3306_TCP_ADDR}|g' /opt/sonar/conf/sonar.properties 
+#RUN sed -i 's|sonar.jdbc.url=jdbc:h2|#sonar.jdbc.url=jdbc:h2|g' /opt/sonar/conf/sonar.properties
+#RUN sed -i 's|#sonar.jdbc.url=jdbc:mysql://localhost|sonar.jdbc.url=jdbc:mysql://0.0.0.0|g' /opt/sonar/conf/sonar.properties 
 
 EXPOSE 9000
 
